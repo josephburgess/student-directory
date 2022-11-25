@@ -1,5 +1,5 @@
 def ask_name
-  puts "Name?".green
+  puts "Name:".green
   $stdin.gets.gsub!(/$\n/, "")
 end
 
@@ -8,7 +8,7 @@ def ask_questions(name)
   student[:name] = name
   questions = %w[age birthplace subject cohort]
   questions.each do |question|
-    puts "#{question.capitalize.green}?:"
+    puts "#{question.capitalize}:".green
     answer = $stdin.gets.gsub!(/$\n/, "")
     answer = "unknown" if answer == ""
     student[question.to_sym] = answer

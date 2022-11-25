@@ -29,7 +29,7 @@ def search_category(list)
   input = $stdin.gets.gsub!(/$\n/, "")
   new_list = list
   new_list = filter_category(list, input) if input != 0 &&
-    %w[age birthplace cohort].include?(input)
+    %w[age birthplace subject cohort].include?(input)
   new_list
 end
 

@@ -13,7 +13,7 @@ def save_students
       ]
     end
   end
-  puts "\n💾 Saved #{@students.count} student#{@students.count == 1 ? "" : "s"} to".green +
+  puts "\n💾 Saved #{@students.count} student#{@students.count == 1 ? "" : "s"} to ".green +
          filename.to_s.red
 end
 
@@ -25,11 +25,12 @@ def load_students(filename)
         name: name,
         age: age,
         birthplace: birthplace,
+        subject: subject,
         cohort: cohort,
       }
     end
   end
-  puts "\n📋 Loaded #{@students.count} student#{@students.count == 1 ? "" : "s"} to".green +
+  puts "\n📋 Loaded #{@students.count} student#{@students.count == 1 ? "" : "s"} from ".green +
          filename.to_s.red
 end
 

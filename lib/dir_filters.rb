@@ -1,6 +1,6 @@
 def filter_by_letter(list)
-  puts "Filter students by first letter?".green
-  puts "For all students, hit return".green
+  puts "Input first letter to filter by name".green
+  puts "Alternatively, for all students, hit return".green
 
   input = $stdin.gets.gsub!(/$\n/, "")
   new_list = list
@@ -24,7 +24,7 @@ end
 
 def search_category(list)
   puts "Choose a category?".green
-  puts "age | birthplace | cohort".red
+  puts "age | birthplace | subject | cohort\n".yellow
   puts "Alternatively, for all categories hit return.".green
   input = $stdin.gets.gsub!(/$\n/, "")
   new_list = list

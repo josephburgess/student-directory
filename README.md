@@ -14,26 +14,28 @@ ruby ./lib/directory.rb
 
 The following additional features were added through refactoring and refinement, which were not part of the original exercise.
 
-1. [x] Allowing for input of additional information (e.g. birthplace, subject) direct in the cli
+- [x] Allowing for input of additional information (e.g. birthplace, subject) direct in the cli
 
-2. [x] Filtering students (e.g. by first initial, birthplace, etc)
+- [x] Filtering students (e.g. by first initial, birthplace, etc)
 
-3. [x] Allowing for custom filenames for saving, exporting and importing .csv files
+- [x] Allowing for custom filenames for saving, exporting and importing .csv files
 
-4. [x] Use of center() in string output
+- [x] Use of center() in string output
 
-5. [x] Use of 'colorize' gem to colour cli text output
+- [x] Use of 'colorize' gem to colour cli text output
 
-6. [x] Switch between student / students depending on if only 1 student on register
+- [x] Fixed output so that appropriate singular/plural ("student"/"students") is printed depending on number of students registered
 
-7. [x] Remove use of chomp()
+- [x] Remove use of chomp()
 
-8. [x] Additional feedback for menu options
+- [x] Additional feedback for menu options
 
-9. [x] Add variables and defaults for filenames
+- [x] Add variables and defaults for filenames
 
-10. [x] Refactor file read and write methods
+- [x] Refactor file read and write methods
 
-11. [x] Add library for csv files
+- [x] Refactoring each() methods to while or until loops
 
-12. [x] Split functionality/methods into separate .rb files for ease of navigation
+- [x] Add library for csv files
+
+- [x] Split functionality/methods into separate .rb files for ease of navigation

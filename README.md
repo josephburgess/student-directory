@@ -24,7 +24,7 @@ The following additional features were added through refactoring and refinement,
 
 - [x] Use of 'colorize' gem to colour cli text output
 
-- [x] Fixed output so that appropriate singular/plural ("student"/"students") is printed depending on number of students registered
+- [x] Fixed cli output so that appropriate singular/plural ("student"/"students") is printed depending on number of students
 
 - [x] Remove use of chomp()
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def process(selection)
   case selection
   when "1"

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def save_students
   puts "\nEnter a filename:".green
   filename = $stdin.gets.strip
@@ -37,6 +39,7 @@ end
 def try_load_students
   filename = ARGV.first
   return if filename.nil?
+
   check_filename(filename) ? load_students(filename) : exit
 end
 
@@ -47,7 +50,7 @@ def load_students_menu
 end
 
 def check_filename(filename)
-  if File.exists?(filename)
+  if File.exist?(filename)
     puts "Ok, loading from '#{filename}'...".green
     true
   else

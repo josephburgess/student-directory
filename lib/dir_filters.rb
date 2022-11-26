@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 def filter_by_letter(list)
   puts "Input first letter to filter by name".green
   puts "Alternatively, for all students, hit return".green
 
   input = $stdin.gets.gsub!(/$\n/, "")
   new_list = list
-  new_list =
-    list.select do |student|
-      student[:name][0].downcase == input.downcase
-    end if input != ""
+  if input != ""
+    new_list =
+      list.select { |student| student[:name][0].downcase == input.downcase }
+  end
   new_list
 end
 

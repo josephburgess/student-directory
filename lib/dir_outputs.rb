@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def print_menu
   puts "\n1. Input students".green
   puts "2. Print current students".green

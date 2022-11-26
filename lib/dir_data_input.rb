@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def ask_name
   puts "Name:".green
   $stdin.gets.gsub!(/$\n/, "")

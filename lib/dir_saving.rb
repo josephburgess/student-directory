@@ -3,19 +3,19 @@
 def save_students
   puts "\nEnter a filename:".green
   filename = $stdin.gets.strip
-  filename = filename == "" ? "student.csv" : filename
-  CSV.open(filename, "w") do |csv|
+  filename = filename == '' ? 'student.csv' : filename
+  CSV.open(filename, 'w') do |csv|
     @students.each do |student|
       csv << [
         student[:name],
         student[:age],
         student[:birthplace],
         student[:subject],
-        student[:cohort],
+        student[:cohort]
       ]
     end
   end
-  puts "\n💾 Saved #{@students.count} student#{@students.count == 1 ? "" : "s"} to ".green +
+  puts "\n💾 Saved #{@students.count} student#{@students.count == 1 ? '' : 's'} to ".green +
          filename.to_s.red
 end
 
@@ -28,11 +28,11 @@ def load_students(filename)
         age: age,
         birthplace: birthplace,
         subject: subject,
-        cohort: cohort,
+        cohort: cohort
       }
     end
   end
-  puts "\n📋 Loaded #{@students.count} student#{@students.count == 1 ? "" : "s"} from ".green +
+  puts "\n📋 Loaded #{@students.count} student#{@students.count == 1 ? '' : 's'} from ".green +
          filename.to_s.red
 end
 

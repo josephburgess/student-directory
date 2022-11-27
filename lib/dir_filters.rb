@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 def filter_by_letter(list)
-  puts "Input first letter to filter by name".green
-  puts "Alternatively, for all students, hit return".green
+  puts 'Input first letter to filter by name'.green
+  puts 'Alternatively, for all students, hit return'.green
 
-  input = $stdin.gets.gsub!(/$\n/, "")
+  input = $stdin.gets.gsub!(/$\n/, '')
   new_list = list
-  if input != ""
+  if input != ''
     new_list =
       list.select { |student| student[:name][0].downcase == input.downcase }
   end
@@ -25,10 +25,10 @@ def filter_category(list, input)
 end
 
 def search_category(list)
-  puts "Choose a category?".green
+  puts 'Choose a category?'.green
   puts "age | birthplace | subject | cohort\n".yellow
-  puts "Alternatively, for all categories hit return.".green
-  input = $stdin.gets.gsub!(/$\n/, "")
+  puts 'Alternatively, for all categories hit return.'.green
+  input = $stdin.gets.gsub!(/$\n/, '')
   new_list = list
   new_list = filter_category(list, input) if input != 0 &&
     %w[age birthplace subject cohort].include?(input)

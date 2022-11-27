@@ -2,15 +2,15 @@
 
 def process(selection)
   case selection
-  when "1"
+  when '1'
     student_input
-  when "2"
+  when '2'
     show_students
-  when "3"
+  when '3'
     save_students
-  when "4"
+  when '4'
     load_students_menu
-  when "9"
+  when '9'
     exit
   else
     puts "I don't know what you meant, try again."

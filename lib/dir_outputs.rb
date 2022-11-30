@@ -3,8 +3,9 @@
 def print_menu
   puts "\n1. Input students".green
   puts '2. Print current students'.green
-  puts '3. Save student list to a file'.green
-  puts '4. Load student list from a file'.green
+  puts '3. Save student list to a new file'.green
+  puts '4. Append student list to an existing file'.green
+  puts '5. Load student list from a file'.green
   puts "9. Exit\n".red
 end
 

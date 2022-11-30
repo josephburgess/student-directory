@@ -19,6 +19,28 @@ def save_students
          filename.to_s.red
 end
 
+def append_students
+  puts "\nEnter a filename:".green
+  filename = $stdin.gets.strip
+  if File.exist?(filename)
+    CSV.open(filename, 'a') do |csv|
+      @students.each do |student|
+        csv << [
+          student[:name],
+          student[:age],
+          student[:birthplace],
+          student[:subject],
+          student[:cohort]
+        ]
+      end
+    end
+    puts "\n💾 Saved #{@students.count} student#{@students.count == 1 ? '' : 's'} to ".green +
+           filename.to_s.red
+  else
+    puts "Sorry, '#{filename}' does not exist".red
+  end
+end
+
 def load_students(filename)
   File.open(filename) do |file|
     CSV.foreach(file) do |line|

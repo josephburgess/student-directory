@@ -9,6 +9,8 @@ def process(selection)
   when '3'
     save_students
   when '4'
+    append_students
+  when '5'
     load_students_menu
   when '9'
     exit
